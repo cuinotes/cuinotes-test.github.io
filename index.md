@@ -1,9 +1,58 @@
+<div id="return-top" class="top_e">
+  <img src="https://user-images.githubusercontent.com/98588218/152080426-115c55cd-825a-4516-9735-65d2af65cd1e.png" width="60" id="img" >
+    <div style="width:60px;margin:auto;">
+        <p id='font' style="font-size:20px;margin-left:10px;display:none;">返回<br>顶部</p>
+    </div>
+</div>
+
+<style type="text/css">
+        
+       .top_e{
+            position:fixed;right:10px;bottom:40px;
+            background:rgba(204,200,255,0.6);
+            border-radius:15px;
+            cursor:pointer;
+            display:none;
+            width:60px;
+            height:60px;
+            }
+       .top_e:hover
+       {
+         color:white;
+         background:#1296DB;
+       }
+    </style>
+    
+// 控制按钮的显示和消失
+ $(window).scroll(function(){
+            if($(window).scrollTop()>300){
+                $('#return-top').fadeIn(300);
+                }
+             else{$('#return-top').fadeOut(200);}
+                 })
+
+
+// 点击按钮，使得页面返回顶部
+$("#return-top").click(function(){
+scrollTo(0,0);
+});
+// 鼠标悬浮按钮之上，图片消失，文字显示
+$(".top_e").mouseover(function(){
+    $("#img").hide();
+    $("#font").show();
+})
+//鼠标离开，文字消失，图片显示。
+$(".top_e").mouseout(function(){
+    $("#font").hide();
+    $("#img").show();
+})
+
+
 # 读书笔记
 
+<br>
 
 ## 《思考的艺术》
-
-<br>
 
 #### 20220128
 
